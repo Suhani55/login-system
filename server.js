@@ -3,8 +3,6 @@ const path = require("path");
 const app = express();
 
 app.use(express.json());
-
-// Serve CSS & JS files
 app.get("/style.css", (req, res) => {
     res.sendFile(path.join(__dirname, "style.css"));
 });
@@ -12,8 +10,6 @@ app.get("/style.css", (req, res) => {
 app.get("/script.js", (req, res) => {
     res.sendFile(path.join(__dirname, "script.js"));
 });
-
-// Serve HTML pages
 app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, "login.html"));
 });
